@@ -207,7 +207,7 @@ font-size: .8rem;
 
 
 
-.navbar:has( #tit:hover) + .jj #s , .jj #s:hover  {
+.navbar:has( #st:hover) + .jj #s , .jj #s:hover  {
     height: 40vh;
     padding-top: 5rem; 
     visibility: visible;
