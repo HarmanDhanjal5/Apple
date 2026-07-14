@@ -50,7 +50,7 @@
 
 /* 2. Reveal the backdrop whenever a navbar item OR a dropdown panel is hovered */
 .navbar:has(button:hover) ~ .menu-backdrop,
-.jj:has(.fifi:hover) ~ .menu-backdrop{
+.jj:has(.inner_div:hover) ~ .menu-backdrop{
     opacity: 2;
     visibility: visible;
 }
@@ -61,7 +61,7 @@
     visibility: visible;
 }
 
-.fifi{
+.inner_div{
 
     display: flex;
     position: fixed;
@@ -98,11 +98,11 @@ header button{
     cursor: pointer;
 }
 
-.fifi  a{
+.inner_div  a{
     text-decoration: none;
     color: black;
 }
-.fifi li{ 
+.inner_div li{ 
     padding-top: .5rem;
 
 }
@@ -320,7 +320,7 @@ main a{
     flex-direction: column;
     align-items: center;
      height: 570px;
-    background-image: url(img/macAIr.jpg);
+    background-image: url(images/Mac_Air.jpg);
     background-size:cover ;
    background-position: center;
     cursor: pointer;
@@ -388,7 +388,7 @@ main a{
      height: 570px;
     background-size:cover ;
    background-position: center;
-    background-image: url(img/topIphones.jpg);
+    background-image: url(images/topIphones.jpg);
     cursor: pointer;
 }
 
@@ -400,7 +400,7 @@ main a{
      height: 570px;
     background-size:cover ;
    background-position: center;
-    background-image: url(img/17pro.jpg);
+    background-image: url(images/17pro.jpg);
     cursor: pointer;
 }
 
@@ -423,7 +423,7 @@ main a{
      width: 50%;
     background-size:cover ;
     background-position: center;
-    background-image: url(img/ipadair.jpg);
+    background-image: url(images/ipadair.jpg);
    
     cursor: pointer;
 }
@@ -444,7 +444,7 @@ main a{
     width: 50%;
     background-size:cover ;
    background-position: center;
-    background-image: url(img/macbook.jpg);
+    background-image: url(images/macbook.jpg);
     cursor: pointer;
 }
 .small_2 .top{
@@ -481,7 +481,7 @@ main a{
 .test_2 .small_1 {
     justify-content: end;
     color: white;
-    background-image: url(img/blackguy.jpg);
+    background-image: url(images/Airpods.jpg);
 }
 
 .test_2 .small_1 .b1{
@@ -498,7 +498,7 @@ main a{
         border-color: white;
 }
 .test_2 .small_2{
-    background-image: url(img/watch_series.jpg);
+    background-image: url(images/watch_series.jpg);
 }
 .test_2 .small_2 .top{
     color: black;
@@ -519,10 +519,10 @@ main a{
 }
 .test_3 .small_1{
     color: white;
-    background-image: url(img/tradein.jpg);
+    background-image: url(images/tradein.jpg);
 }
 .test_3 .small_2{
-    background-image: url(img/card.jpg);
+    background-image: url(images/card.jpg);
 }
 .test_3  .top{
     color: black;
