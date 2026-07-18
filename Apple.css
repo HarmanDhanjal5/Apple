@@ -24,7 +24,32 @@
 
 #menu{
     display: none;
+    margin-right: 1rem;
 }
+
+#menu_item li {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;            
+ list-style: none;
+  font-size: 2rem;
+ padding-top: .5rem ;
+}
+
+
+#menu_item li:hover {
+    background-color: white;
+  }
+
+li i{
+    visibility: hidden; 
+}
+
+li:hover i {
+    font-size:medium;
+   visibility: visible; 
+}
+
 
 .jj{
      background: transparent;
@@ -119,6 +144,9 @@ header button{
     color: #757575;
 }
 
+.hehe i{
+    align-self:  end;
+}
 
 .fifi_2{
 
@@ -317,32 +345,6 @@ font-size: .8rem;
     color: black;
 }
 
-#menu_item li {
-  display: flex;
-  justify-content: space-between; 
-  align-items: center;            
- list-style: none;
-    font-size: 2rem;
-    padding-top: .5rem ;
-}
-
-#menu_item li:hover {
-    background-color: white;
-  }
-
-li span{
-    visibility: hidden;
-    color:#757575;
-     background-color: white;
-    font-size: 2rem;
-    padding-top: .5rem ;
-}
-
-li:hover .hover-text {
-   visibility: visible; 
-}
-
-
 
 main a{
     display: inline;
@@ -388,7 +390,7 @@ main a{
     font-size: 1.3rem;
     border-radius: 25px;
     align-items: center;
-    padding: 1.5% 1.2rem .5rem 1.2rem ;
+    padding: .5rem 1.2rem .5rem 1.2rem ;
 }
 
 .b1{
@@ -595,21 +597,18 @@ ul{
         flex-direction: column;
         width: 19%;
         align-items: start;
-        flex-wrap: nowrap;     
         gap: .5rem;
 }
 
 .hehe button{
-    padding: .5rem .5rem .5rem .3rem ;
+        padding: .5rem .5rem .5rem .3rem ;
         font-family: sans-serif;
         font-weight: 300px;
-        align-self: left;
         border: none;
         font-size: .75rem;
 }
 
 .term{
-   
    width: 58.4rem;
 }
 
@@ -622,11 +621,25 @@ ul{
     text-decoration-line: underline;
 }
 
-
-
 @media (max-width : 1200px){
 
-   
+    .top_im , .im_2 , .im_3 {
+       h1{
+        font-size: 2.3rem;
+       }
+       p{
+        font-size: 1.3rem;
+       }
+       button{
+        font-size: 1rem;
+       }
+    }
+
+    .small_1 , .small_2{
+        h1 {
+         font-size: 1.9rem;      
+        }
+    }
 
 
 footer{
@@ -663,27 +676,26 @@ footer{
 
 @media (max-width:745px) {
 
-   
+   .top_im , .im_2 , .im_3 ,.small_1 , .small_2{
+        width: 100%;
+        height: 37rem;
+         margin: 0px;
+       h1{
+        font-size: 1.8rem;
+       }
+       p{
+        font-size: 1.2rem;
+       }
+       button{
+        font-size: .9rem;
+       }
+    }
 
     .top_im {
         background-image: url(images/macbook_air_m5.jpg);
     }
 
-    .top_im , .im_2 , .im_3 , .small_1 , .small_2{
-        width: 100%;
-        height: 37rem;
-         margin: 0px;
-  
-    }
-
-    .test{
-        display: block;
-    }
-
-     .test_2{
-        display: block;
-    }
-     .test_3{
+    .test, .test_2 ,.test_3{
         display: block;
     }
 
@@ -713,44 +725,11 @@ footer{
    position: fixed;
  
 }
-#menu{
-    margin-right: 1.5rem;
-}
 
-.navbar:has( #menu:hover) + .jj #menu_item , .jj #menu_item:hover  {
-    height: 100vh;
-    padding-top: 5rem; 
-    visibility: visible;
-    color: black;
-}
-
-#menu_item li {
-  display: flex;
-  justify-content: space-between; 
-  align-items: center;            
- list-style: none;
-    font-size: 2rem;
-    padding-top: .5rem ;
-}
-
-#menu_item li:hover {
-    background-color: white;
-  }
-
-li span{
-    visibility: hidden;
-    color:#757575;
-     background-color: white;
-    font-size: 2rem;
-    padding-top: .5rem ;
-}
-
-li:hover .hover-text {
-   visibility: visible; 
-}
 }
 
 @media (max-width:850px){    
+
 
      .phone{
         display:block;
@@ -759,19 +738,24 @@ li:hover .hover-text {
         .lap{
                 display: none;
             }
+
         .di{
         flex-direction: column;
         display: none;
         }
 
-        .hehe:hover .di{
+        .hehe:hover {
+            .di{
             display:flex;
         }
+    }
+
         .term{
             width: 100%;
         }
-   footer{
-           padding-left: 2%;
+
+      footer{
+         padding-left: 2%;
         padding-right: 2%;
         }
     
@@ -780,6 +764,7 @@ li:hover .hover-text {
         display: inline;
         }
 
+    
 
         .hehe{
             width: inherit;
@@ -790,5 +775,4 @@ li:hover .hover-text {
         }
 
 }
-
 
