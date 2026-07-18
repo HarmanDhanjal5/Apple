@@ -25,6 +25,7 @@
 #menu{
     display: none;
 }
+
 .jj{
      background: transparent;
       position: fixed;
@@ -89,6 +90,7 @@
     text-decoration: none;
     color: #323232;
 }
+
 .logo{
     display: inline-block;
     font-size: 1rem;
@@ -138,8 +140,8 @@ header button{
 
 }
 
-#crt{
-    padding-left: 2rem;
+#crt ,#sear{
+    padding-left: 20%;
 }
 
 .fifi_2 #llp{
@@ -158,13 +160,11 @@ header button{
 font-size: .8rem;
 }
 
-
 #crt li{
     font-size: .8rem;
-     padding: .5rem 0rem 0rem 0rem;
-     font-weight: 550;
-    
+     font-weight: 550;  
 }
+
 .fifi_2  a{
     text-decoration: none;
     color: black;
@@ -354,7 +354,7 @@ main a{
     display: flex;
     flex-direction: column;
     align-items: center;
-     height: 570px;
+    height: 570px;
     background-image: url(images/Mac_Air.jpg);
     background-size:cover ;
    background-position: center;
@@ -388,7 +388,7 @@ main a{
     font-size: 1.3rem;
     border-radius: 25px;
     align-items: center;
-    padding: .5rem 1.2rem .5rem 1.2rem ;
+    padding: 1.5% 1.2rem .5rem 1.2rem ;
 }
 
 .b1{
@@ -625,6 +625,10 @@ ul{
 
 
 @media (max-width : 1200px){
+
+   
+
+
 footer{
          padding-left: 10%;
         padding-right: 10%;
@@ -659,6 +663,8 @@ footer{
 
 @media (max-width:745px) {
 
+   
+
     .top_im {
         background-image: url(images/macbook_air_m5.jpg);
     }
@@ -685,6 +691,10 @@ footer{
 
 @media (max-width:900px){
 
+     #crt,#sear{
+        padding-left: 3%;
+    }
+
     .navbar button{
         display: none;
     }
@@ -698,7 +708,8 @@ footer{
 }
 
 .main_logo{
-   margin-right:96%;
+    font-size: 1.2rem;
+   margin-right:95%;
    position: fixed;
  
 }
