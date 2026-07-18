@@ -7,7 +7,6 @@
      background: transparent;
 }
 
-
 .navbar{
  
     position: fixed;
@@ -23,6 +22,9 @@
     z-index: 999;
 }
 
+#menu{
+    display: none;
+}
 .jj{
      background: transparent;
       position: fixed;
@@ -137,7 +139,7 @@ header button{
 }
 
 #crt{
-    padding-left: 10rem;
+    padding-left: 2rem;
 }
 
 .fifi_2 #llp{
@@ -173,6 +175,7 @@ font-size: .8rem;
     background-color: #dbdbdb;
     color: black;
     font-weight: 545;
+   
 
 }
 .fifi_2 p{
@@ -307,6 +310,38 @@ font-size: .8rem;
     color: black;
 }
 
+.navbar:has( #menu:hover) + .jj #menu_item , .jj #menu_item:hover  {
+    height: 100vh;
+    padding-top: 5rem; 
+    visibility: visible;
+    color: black;
+}
+
+#menu_item li {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;            
+ list-style: none;
+    font-size: 2rem;
+    padding-top: .5rem ;
+}
+
+#menu_item li:hover {
+    background-color: white;
+  }
+
+li span{
+    visibility: hidden;
+    color:#757575;
+     background-color: white;
+    font-size: 2rem;
+    padding-top: .5rem ;
+}
+
+li:hover .hover-text {
+   visibility: visible; 
+}
+
 
 
 main a{
@@ -419,8 +454,8 @@ main a{
     display: flex;
     flex-direction: column;
     align-items: center;    
-     height: 37rem;
-     width: 50%;
+    height: 37rem;
+    width: 50%;
     background-size:cover ;
     background-position: center;
     background-image: url(images/ipadair.jpg);
@@ -452,7 +487,6 @@ main a{
 }
 .small_2 h1{
     justify-self: center;
-    
     font-size: 2.1rem;
 }
 .small_2 p{
@@ -527,23 +561,28 @@ main a{
 .test_3  .top{
     color: black;
 }
-.test_3 h1{
-     display: inline;
-}
 
 
 footer{  
-    display: flexbox;
+    display: flex;
     flex-direction: column;
     justify-items: start;
-    padding:0rem 20% 0rem 20%;
+    padding-left: 20%;
+    padding-right: 20%;
     font-size: .75rem ;
     color: #757575;
     margin-bottom: 1rem;
 }
 
+
 footer a{
     color: #757575;
+}
+
+
+.phone{
+    display: none;
+    width: 100%;
 }
 
 ul{
@@ -569,6 +608,10 @@ ul{
         font-size: .75rem;
 }
 
+.term{
+   
+   width: 58.4rem;
+}
 
 .hehe a{
     padding: .5rem .5rem .5rem .3rem ;
@@ -578,3 +621,164 @@ ul{
 .hehe a:hover{
     text-decoration-line: underline;
 }
+
+
+
+@media (max-width : 1200px){
+footer{
+         padding-left: 10%;
+        padding-right: 10%;
+        }
+    .term{
+        width:100%
+    }
+        .small_1{
+            height: 30rem;
+        }
+        .small_2{
+            height: 30rem;
+        }
+
+        .test .small_1{
+            background-image: url(images/ipad_air_m4_.jpg);
+        }
+
+        .test_2 .small_2{
+            background-image: url(images/apple_watch_series_11.jpg);
+        }
+
+        .test_3 .small_1{
+            background-image: url(images/iphone_tradein.jpg);
+        }
+        .test_3 .small_2{
+            background-image: url(images/apple_card.jpg);
+        }
+
+}
+
+
+@media (max-width:745px) {
+
+    .top_im {
+        background-image: url(images/macbook_air_m5.jpg);
+    }
+
+    .top_im , .im_2 , .im_3 , .small_1 , .small_2{
+        width: 100%;
+        height: 37rem;
+         margin: 0px;
+  
+    }
+
+
+    .test{
+        display: block;
+    }
+
+     .test_2{
+        display: block;
+    }
+     .test_3{
+        display: block;
+    }
+
+}
+
+@media (max-width:900px){
+
+    .navbar button{
+        display: none;
+    }
+
+    .navbar #menu{
+        display: block;
+    }
+
+    .navbar{
+    justify-content: end;
+}
+
+.main_logo{
+   margin-right:96%;
+   position: fixed;
+ 
+}
+#menu{
+    margin-right: 1.5rem;
+}
+
+.navbar:has( #menu:hover) + .jj #menu_item , .jj #menu_item:hover  {
+    height: 100vh;
+    padding-top: 5rem; 
+    visibility: visible;
+    color: black;
+}
+
+#menu_item li {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;            
+ list-style: none;
+    font-size: 2rem;
+    padding-top: .5rem ;
+}
+
+#menu_item li:hover {
+    background-color: white;
+  }
+
+li span{
+    visibility: hidden;
+    color:#757575;
+     background-color: white;
+    font-size: 2rem;
+    padding-top: .5rem ;
+}
+
+li:hover .hover-text {
+   visibility: visible; 
+}
+}
+
+@media (max-width:850px){    
+
+     .phone{
+        display:block;
+    }
+
+        .lap{
+                display: none;
+            }
+        .di{
+        flex-direction: column;
+        display: none;
+        }
+
+        .hehe:hover .di{
+            display:flex;
+        }
+        .term{
+            width: 100%;
+        }
+   footer{
+           padding-left: 2%;
+        padding-right: 2%;
+        }
+    
+
+        footer ol{  
+        display: inline;
+        }
+
+
+        .hehe{
+            width: inherit;
+            display: block;
+            width: 100%;
+            border-bottom: solid #757575 .05rem;
+
+        }
+
+}
+
+
