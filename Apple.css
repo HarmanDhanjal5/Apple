@@ -34,21 +34,21 @@
  list-style: none;
   font-size: 2rem;
  padding-top: .5rem ;
-}
 
-
-#menu_item li:hover {
-    background-color: white;
-  }
-
-li i{
+  i{
     visibility: hidden; 
 }
 
-li:hover i {
+}
+
+#menu_item li:hover {
+    background-color: white;
+    i {
     font-size:medium;
    visibility: visible; 
 }
+
+  }
 
 
 .jj{
@@ -221,7 +221,7 @@ font-size: .8rem;
 }
 .fifi_2 li{
     width: 90%;
-    display: bock;
+    display: block;
     font-weight: lighter;
     font-size: .78rem;
     padding: .3rem 0rem 0rem .2rem;
