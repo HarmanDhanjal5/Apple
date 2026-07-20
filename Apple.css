@@ -19,7 +19,7 @@
     font-size: 0.5rem;
     justify-content: center;
     gap: 2rem;
-    z-index: 999;
+    z-index: 15;
 }
 
 #menu{
@@ -56,7 +56,7 @@
       position: fixed;
       visibility: hidden;
      width: 100%;
-        z-index: 3;
+        z-index: 10;
 }
 
 /* 1. Setup the overlay to cover the viewport below the navbar */
@@ -104,7 +104,7 @@
     padding-bottom: 6rem;
     transition: all .3s ;
     transition-delay: .1s;
-    z-index: 4;
+    z-index: 10;
 
 }
 .main_logo{
@@ -164,7 +164,7 @@ header button{
     padding-left: 2rem;
     transition: all .3s ;
     transition-delay: .1s;
-    z-index: 4;
+    z-index: 10;
 
 }
 
