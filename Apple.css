@@ -1,0 +1,778 @@
+
+*{
+    margin:0px;
+    border: border-box;
+    padding: 0px;
+    font-family: Arial;
+     background: transparent;
+}
+
+.navbar{
+ 
+    position: fixed;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 3rem;
+    color: black;
+    background-color: rgba(255, 255, 255, 0.695);
+    font-size: 0.5rem;
+    justify-content: center;
+    gap: 2rem;
+    z-index: 15;
+}
+
+#menu{
+    display: none;
+    margin-right: 1rem;
+}
+
+#menu_item li {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;            
+ list-style: none;
+  font-size: 2rem;
+ padding-top: .5rem ;
+
+  i{
+    visibility: hidden; 
+}
+
+}
+
+#menu_item li:hover {
+    background-color: white;
+    i {
+    font-size:medium;
+   visibility: visible; 
+}
+
+  }
+
+
+.jj{
+     background: transparent;
+      position: fixed;
+      visibility: hidden;
+     width: 100%;
+        z-index: 10;
+}
+
+/* 1. Setup the overlay to cover the viewport below the navbar */
+.menu-backdrop {
+    position: fixed;
+    top: 3rem; /* Starts exactly where the navbar ends */
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.15); /* Soft dimming effect */
+    backdrop-filter: blur(10px);            /* The blur effect */
+    -webkit-backdrop-filter: blur(8px);    /* Safari support */
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;                  /* Prevents it from blocking clicks normally */
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 0;                            /* Sits safely behind your dropdowns (z-index: 999) */
+}
+
+/* 2. Reveal the backdrop whenever a navbar item OR a dropdown panel is hovered */
+.navbar:has(button:hover) ~ .menu-backdrop,
+.jj:has(.inner_div:hover) ~ .menu-backdrop{
+    opacity: 2;
+    visibility: visible;
+}
+
+.navbar:has(.logo:hover) ~ .menu-backdrop,
+.jj:has(.fifi_2:hover) ~ .menu-backdrop{
+    opacity: 2;
+    visibility: visible;
+}
+
+.inner_div{
+
+    display: flex;
+    position: fixed;
+    visibility: hidden;
+    height: 3.3rem;
+    align-items: left;     
+    overflow: hidden;
+    background-color: white;
+    color: transparent;
+    width: inherit;
+    padding-left: 20rem;
+    padding-bottom: 6rem;
+    transition: all .3s ;
+    transition-delay: .1s;
+    z-index: 10;
+
+}
+.main_logo{
+     display: inline-block;
+    font-size: 1rem;
+}
+.main_logo a {
+    text-decoration: none;
+    color: #323232;
+}
+
+.logo{
+    display: inline-block;
+    font-size: 1rem;
+}
+
+header button{  
+    display: inline;
+    border: none;
+    cursor: pointer;
+}
+
+.inner_div  a{
+    text-decoration: none;
+    color: black;
+}
+.inner_div li{ 
+    padding-top: .5rem;
+
+}
+.nav_stuff_big li {
+    font-size: 1.5rem;
+}
+.nav_stuff{
+    font-size: .75rem ;
+    padding-left: 4rem;
+    color: #757575;
+}
+
+.hehe i{
+    align-self:  end;
+}
+
+.fifi_2{
+
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    visibility: hidden;
+    height: 3.3rem;
+    
+    overflow: hidden;
+    background-color: white;
+    color: transparent;
+   
+    width: inherit;
+    padding-left: 2rem;
+    transition: all .3s ;
+    transition-delay: .1s;
+    z-index: 10;
+
+}
+
+#crt ,#sear{
+    padding-left: 20%;
+}
+
+.fifi_2 #llp{
+    font-size: large;
+    align-items: center;
+    padding-right: 1rem;
+}
+
+#si{
+    font-size: .8rem;
+    text-decoration:  underline;
+    color: blue;
+}
+
+#crt p{
+font-size: .8rem;
+}
+
+#crt li{
+    font-size: .8rem;
+     font-weight: 550;  
+}
+
+.fifi_2  a{
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+.fifi_2 li:hover {
+    background-color: #dbdbdb;
+    color: black;
+    font-weight: 545;
+   
+
+}
+.fifi_2 p{
+    padding: .5rem 0rem .5rem 0rem;
+    font-size: medium;
+    color: #757575;
+}
+
+.fifi_2 i{
+    justify-self: center;
+    display: inline;
+    font-size: .7rem;
+    color: #757575;
+    /* font-weight: lighter; */
+}
+.fifi_2 li{
+    width: 90%;
+    display: block;
+    font-weight: lighter;
+    font-size: .78rem;
+    padding: .3rem 0rem 0rem .2rem;
+}
+
+
+.fifi_2 input{
+    outline: none;
+    border : transparent;
+    text-decoration: none;
+    font-size: 1.5rem;
+    width : 90%;
+}
+
+
+
+.navbar:has( #st:hover) + .jj #s , .jj #s:hover  {
+    height: 40vh;
+    padding-top: 5rem; 
+    visibility: visible;
+    color: black;
+    /* z-index: 8; */
+}
+
+.navbar:has( #Mac:hover) + .jj #m, .jj #m:hover   {
+    height: 37vh;
+    padding-top: 5rem; 
+    visibility: visible;
+    color: black;
+    /* z-index: ; */
+}
+
+
+.navbar:has( #iPad:hover) + .jj #ip ,  .jj #ip:hover   {
+
+    height: 32vh;
+    padding-top: 5rem; 
+    visibility: visible;
+    color: black;
+
+}
+
+.navbar:has( #iPhone:hover) + .jj #i,  .jj #i:hover   {
+    height: 23vh;
+    padding-top: 5rem; 
+    visibility: visible;
+    color: black;
+}
+
+
+.navbar:has( #Watch:hover) + .jj #w ,  .jj #w:hover   {
+
+    height: 23vh;
+    padding-top: 5rem; 
+    visibility: visible;
+    color: black;
+
+}
+
+.navbar:has( #Vision:hover) + .jj #v,  .jj #v:hover   {
+    height: 13vh;
+    padding-top: 5rem; 
+    visibility: visible;
+    color: black;
+}
+
+
+.navbar:has( #TV:hover) + .jj #t ,  .jj #t:hover   {
+
+    height: 17vh;
+    padding-top: 5rem; 
+    visibility: visible;
+    color: black;
+
+}
+
+.navbar:has( #enter:hover) + .jj #e,  .jj #e:hover   {
+    height: 43vh;
+    padding-top: 5rem; 
+    visibility: visible;
+    color: black;
+}
+
+.navbar:has( #acces:hover) + .jj #a ,  .jj #a:hover   {
+
+    height: 33vh;
+    padding-top: 5rem; 
+    visibility: visible;
+    color: black;
+
+}
+
+.navbar:has( #Support:hover) + .jj #ss,  .jj #ss:hover   {
+    height: 27vh;
+    padding-top: 5rem; 
+    visibility: visible;
+    color: black;
+}
+
+
+.navbar:has(  #search:hover ) + .jj #sear , .jj #sear:hover   {
+
+    height: 33vh;
+    padding-top: 5rem; 
+    visibility: visible;
+    color: black;
+
+}
+
+.navbar:has( #cart:hover) + .jj #crt,  .jj #crt:hover   {
+    height: 37vh;
+    padding-top: 5rem; 
+    visibility: visible;
+    color: black;
+}
+
+.navbar:has( #menu:hover) + .jj #menu_item , .jj #menu_item:hover  {
+    height: 100vh;
+    padding-top: 5rem; 
+    visibility: visible;
+    color: black;
+}
+
+
+main a{
+    display: inline;
+    text-decoration: none; 
+    color: inherit;
+}
+
+.top_im {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 570px;
+    background-image: url(images/Mac_Air.jpg);
+    background-size:cover ;
+   background-position: center;
+    cursor: pointer;
+}
+
+.top{
+  background: transparent;
+   padding-top: 3rem;
+}
+
+.top h1{
+    margin-top: 1rem;
+    justify-self: center;
+    font-size: 3rem;
+    background: transparent;
+
+}
+
+.top p{
+    justify-self: center;
+    padding-top: .1rem;
+    background: transparent;
+    font-size: 1.6rem;
+}
+.im {
+    padding-top: 1rem;
+    background: transparent;
+}
+.im button{
+    font-size: 1.3rem;
+    border-radius: 25px;
+    align-items: center;
+    padding: .5rem 1.2rem .5rem 1.2rem ;
+}
+
+.b1{
+    margin-right: 1rem;
+    background-color: #0071E3;
+    color: white;
+   border: none;
+     cursor: pointer;
+}
+.b2{
+    background: transparent;
+    border: 1px solid #0071E3;
+    color: #0071E3;
+      cursor: pointer;
+      
+    
+}
+.b2:hover{
+    background: #0071E3;
+    color:white
+}
+
+.test_2 .small_1 .b2:hover{
+    background: white ;
+    color:#23201D ;
+}
+.im_2{
+   margin-top: 12px;
+   display: flex;
+    flex-direction: column;
+    align-items: center;     
+     height: 570px;
+    background-size:cover ;
+   background-position: center;
+    background-image: url(images/topIphones.jpg);
+    cursor: pointer;
+}
+
+.im_3{
+    margin-top: 12px;
+   display: flex;
+    flex-direction: column;
+    align-items: center;     
+     height: 570px;
+    background-size:cover ;
+   background-position: center;
+    background-image: url(images/17pro.jpg);
+    cursor: pointer;
+}
+
+.im_3 .top{
+    color: white;
+}
+
+.test{
+    width: 100%;
+    display: flex;
+    margin-top: 12px;
+    
+}
+.small_1{
+    margin: 0px 6px 0px 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+    height: 37rem;
+    width: 50%;
+    background-size:cover ;
+    background-position: center;
+    background-image: url(images/ipadair.jpg);
+   
+    cursor: pointer;
+}
+
+.small_1 h1{
+    font-size: 2.1rem;
+}
+.small_1 p{
+    font-size: 1.2rem;
+}
+
+.small_2{
+    margin: 0px 12px 0px 6px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;     
+    height: 37rem;
+    width: 50%;
+    background-size:cover ;
+   background-position: center;
+    background-image: url(images/macbook.jpg);
+    cursor: pointer;
+}
+.small_2 .top{
+    color: white;
+}
+.small_2 h1{
+    justify-self: center;
+    font-size: 2.1rem;
+}
+.small_2 p{
+    font-size: 1.2rem;
+    justify-self: center;
+}
+.small_1  button{
+   font-size: .9rem;
+    border-radius: 25px;
+    align-items: center;
+    padding: .5rem 1.2rem .5rem 1.2rem ;
+}
+.small_2  button{
+    font-size: .9rem;
+    border-radius: 25px;
+    align-items: center;
+    padding: .5rem 1.2rem .5rem 1.2rem ;
+}
+
+
+.test_2{
+    width: 100%;
+    display: flex;
+    margin-top: 12px;
+}
+.test_2 .small_1 {
+    justify-content: end;
+    color: white;
+    background-image: url(images/Airpods.jpg);
+}
+
+.test_2 .small_1 .b1{
+    background-color: white;
+    color: #23201D;
+    margin-bottom: 4rem;
+}
+.test_2 .small_1 .b2{
+    font-size: .9rem;
+    border-radius: 25px;
+    align-items: center;
+     padding: .5rem 1.2rem .5rem 1.2rem ;
+        color: white;
+        border-color: white;
+}
+.test_2 .small_2{
+    background-image: url(images/watch_series.jpg);
+}
+.test_2 .small_2 .top{
+    color: black;
+}
+.test_2 .small_2 h1{
+     display: inline;
+}
+
+
+.top i{
+    font-size: 2.5rem;
+}
+
+.test_3{
+     width: 100%;
+    display: inline-flex;
+    margin-top: 12px;
+}
+.test_3 .small_1{
+    color: white;
+    background-image: url(images/tradein.jpg);
+}
+.test_3 .small_2{
+    background-image: url(images/card.jpg);
+}
+.test_3  .top{
+    color: black;
+}
+
+
+footer{  
+    display: flex;
+    flex-direction: column;
+    justify-items: start;
+    padding-left: 20%;
+    padding-right: 20%;
+    font-size: .75rem ;
+    color: #757575;
+    margin-bottom: 1rem;
+}
+
+
+footer a{
+    color: #757575;
+}
+
+
+.phone{
+    display: none;
+    width: 100%;
+}
+
+ul{
+    list-style-type: none;
+}
+
+
+.hehe{
+        display: inline-flex ;
+        flex-direction: column;
+        width: 19%;
+        align-items: start;
+        gap: .5rem;
+}
+
+.hehe button{
+        padding: .5rem .5rem .5rem .3rem ;
+        font-family: sans-serif;
+        font-weight: 300px;
+        border: none;
+        font-size: .75rem;
+}
+
+.term{
+   width: 58.4rem;
+}
+
+.hehe a{
+    padding: .5rem .5rem .5rem .3rem ;
+    text-decoration: none;
+}
+
+.hehe a:hover{
+    text-decoration-line: underline;
+}
+
+@media (max-width : 1200px){
+
+    .top_im , .im_2 , .im_3 {
+       h1{
+        font-size: 2.3rem;
+       }
+       p{
+        font-size: 1.3rem;
+       }
+       button{
+        font-size: 1rem;
+       }
+    }
+
+    .small_1 , .small_2{
+        h1 {
+         font-size: 1.9rem;      
+        }
+    }
+
+
+footer{
+         padding-left: 10%;
+        padding-right: 10%;
+        }
+    .term{
+        width:100%
+    }
+        .small_1{
+            height: 30rem;
+        }
+        .small_2{
+            height: 30rem;
+        }
+
+        .test .small_1{
+            background-image: url(images/ipad_air_m4_.jpg);
+        }
+
+        .test_2 .small_2{
+            background-image: url(images/apple_watch_series_11.jpg);
+        }
+
+        .test_3 .small_1{
+            background-image: url(images/iphone_tradein.jpg);
+        }
+        .test_3 .small_2{
+            background-image: url(images/apple_card.jpg);
+        }
+
+}
+
+
+@media (max-width:745px) {
+
+   .top_im , .im_2 , .im_3 ,.small_1 , .small_2{
+        width: 100%;
+        height: 37rem;
+         margin: 0px;
+       h1{
+        font-size: 1.8rem;
+       }
+       p{
+        font-size: 1.2rem;
+       }
+       button{
+        font-size: .9rem;
+       }
+    }
+
+    .top_im {
+        background-image: url(images/macbook_air_m5.jpg);
+    }
+
+    .test, .test_2 ,.test_3{
+        display: block;
+    }
+
+}
+
+@media (max-width:900px){
+
+     #crt,#sear{
+        padding-left: 3%;
+    }
+
+    .navbar button{
+        display: none;
+    }
+
+    .navbar #menu{
+        display: block;
+    }
+
+    .navbar{
+    justify-content: end;
+}
+
+.main_logo{
+    font-size: 1.2rem;
+   margin-right:95%;
+   position: fixed;
+ 
+}
+
+}
+
+@media (max-width:850px){    
+
+
+     .phone{
+        display:block;
+    }
+
+        .lap{
+                display: none;
+            }
+
+        .di{
+        flex-direction: column;
+        display: none;
+        }
+
+        .hehe:hover {
+            .di{
+            display:flex;
+        }
+    }
+
+        .term{
+            width: 100%;
+        }
+
+      footer{
+         padding-left: 2%;
+        padding-right: 2%;
+        }
+    
+
+        footer ol{  
+        display: inline;
+        }
+
+    
+
+        .hehe{
+            width: inherit;
+            display: block;
+            width: 100%;
+            border-bottom: solid #757575 .05rem;
+
+        }
+
+}
+
