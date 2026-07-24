@@ -3,7 +3,9 @@
     margin:0px;
     border: border-box;
     padding: 0px;
-    font-family: Arial;
+    font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
      background: transparent;
 }
 
@@ -44,7 +46,6 @@
 #menu_item li:hover {
     background-color: white;
     i {
-    font-size:medium;
    visibility: visible; 
 }
 
@@ -59,7 +60,7 @@
         z-index: 10;
 }
 
-/* 1. Setup the overlay to cover the viewport below the navbar */
+
 .menu-backdrop {
     position: fixed;
     top: 3rem; /* Starts exactly where the navbar ends */
@@ -74,19 +75,6 @@
     pointer-events: none;                  /* Prevents it from blocking clicks normally */
     transition: opacity 0.3s ease, visibility 0.3s ease;
     z-index: 0;                            /* Sits safely behind your dropdowns (z-index: 999) */
-}
-
-/* 2. Reveal the backdrop whenever a navbar item OR a dropdown panel is hovered */
-.navbar:has(button:hover) ~ .menu-backdrop,
-.jj:has(.inner_div:hover) ~ .menu-backdrop{
-    opacity: 2;
-    visibility: visible;
-}
-
-.navbar:has(.logo:hover) ~ .menu-backdrop,
-.jj:has(.fifi_2:hover) ~ .menu-backdrop{
-    opacity: 2;
-    visibility: visible;
 }
 
 .inner_div{
@@ -109,7 +97,7 @@
 }
 .main_logo{
      display: inline-block;
-    font-size: 1rem;
+    font-size: 1.2rem;
 }
 .main_logo a {
     text-decoration: none;
@@ -118,7 +106,7 @@
 
 .logo{
     display: inline-block;
-    font-size: 1rem;
+    font-size: 1.2rem;
 }
 
 header button{  
@@ -168,8 +156,8 @@ header button{
 
 }
 
-#crt ,#sear{
-    padding-left: 20%;
+#search i{
+    transform: rotate(270deg);
 }
 
 .fifi_2 #llp{
@@ -177,6 +165,7 @@ header button{
     align-items: center;
     padding-right: 1rem;
 }
+
 
 #si{
     font-size: .8rem;
@@ -215,10 +204,9 @@ font-size: .8rem;
 .fifi_2 i{
     justify-self: center;
     display: inline;
-    font-size: .7rem;
     color: #757575;
-    /* font-weight: lighter; */
-}
+ }  
+
 .fifi_2 li{
     width: 90%;
     display: block;
@@ -238,12 +226,12 @@ font-size: .8rem;
 
 
 
-.navbar:has( #st:hover) + .jj #s , .jj #s:hover  {
+/* .navbar:has( #st:hover) + .jj #s , .jj #s:hover  {
     height: 40vh;
     padding-top: 5rem; 
     visibility: visible;
     color: black;
-    /* z-index: 8; */
+   
 }
 
 .navbar:has( #Mac:hover) + .jj #m, .jj #m:hover   {
@@ -251,7 +239,7 @@ font-size: .8rem;
     padding-top: 5rem; 
     visibility: visible;
     color: black;
-    /* z-index: ; */
+   
 }
 
 
@@ -343,8 +331,29 @@ font-size: .8rem;
     padding-top: 5rem; 
     visibility: visible;
     color: black;
+} */
+
+
+/* Reveal backdrop via JS active class instead of hover */
+.menu-backdrop.active {
+    opacity: 2;
+    visibility: visible;
 }
 
+/* Reveal individual menus via JS active class */
+#s.active { height: 40vh; padding-top: 5rem; visibility: visible; color: black; }
+#m.active { height: 37vh; padding-top: 5rem; visibility: visible; color: black; }
+#ip.active { height: 32vh; padding-top: 5rem; visibility: visible; color: black; }
+#i.active { height: 23vh; padding-top: 5rem; visibility: visible; color: black; }
+#w.active { height: 23vh; padding-top: 5rem; visibility: visible; color: black; }
+#v.active { height: 13vh; padding-top: 5rem; visibility: visible; color: black; }
+#t.active { height: 17vh; padding-top: 5rem; visibility: visible; color: black; }
+#e.active { height: 43vh; padding-top: 5rem; visibility: visible; color: black; }
+#a.active { height: 33vh; padding-top: 5rem; visibility: visible; color: black; }
+#ss.active { height: 27vh; padding-top: 5rem; visibility: visible; color: black; }
+#sear.active { height: 33vh; padding-top: 5rem; visibility: visible; color: black; }
+#crt.active { height: 37vh; padding-top: 5rem; visibility: visible; color: black; }
+#menu_item.active { height: 100vh; padding-top: 5rem; visibility: visible; color: black; }
 
 main a{
     display: inline;
@@ -606,8 +615,19 @@ ul{
         font-weight: 300px;
         border: none;
         font-size: .75rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
 }
 
+.hehe button i {
+    transition: transform 0.4s ease-in-out;
+}
+
+.hehe button i.rotate {
+    transform: rotateX(180deg);
+}
 .term{
    width: 58.4rem;
 }
@@ -701,6 +721,7 @@ footer{
 
 }
 
+
 @media (max-width:900px){
 
      #crt,#sear{
@@ -733,6 +754,7 @@ footer{
 
      .phone{
         display:block;
+       
     }
 
         .lap{
@@ -744,11 +766,11 @@ footer{
         display: none;
         }
 
-        .hehe:hover {
-            .di{
-            display:flex;
-        }
+        
+       .di.active {
+        display: flex;
     }
+    
 
         .term{
             width: 100%;
@@ -773,6 +795,4 @@ footer{
             border-bottom: solid #757575 .05rem;
 
         }
-
 }
-
